@@ -1,11 +1,12 @@
-import Logo from '../assets/person-2.jpg'
-export default function Navbar() {
+import Logo from '../assets/hamburger.png'
+export default function Navbar({title}) {
   return (
     <>
       <nav>
         <div className="logo-container">
-          <img src={Logo} alt="" />
+          <img src={Logo} alt="logo" />
         </div>
+        <h1>{title}</h1>
         <ul className="menu-list">
           <li>Home</li>
           <li>About</li>
