@@ -18,8 +18,8 @@ nav {
 }
 
 .logo-container img {
-  width: 4vw;
-  height: 15vh;
+  width: 3.5rem;
+  height: 3.5rem;
   border: none;
   border-radius: 50%;
 }
@@ -76,26 +76,63 @@ nav h1 {
   box-shadow: 0 3px 8px rgba(255, 35, 35, 0.9);
 }
 
-.food-items{
+.food-items {
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
 }
-.food-items h2{
+.food-items h2 {
   padding: 10px 0;
 }
-.food-items .img{
+.food-items .img {
   display: flex;
   gap: 25px;
-  margin: 10px 0 ;
+  margin: 10px 0;
 }
-.food-items img{
+.food-items img {
   width: 18vw;
   height: 20vw;
   border-radius: 20px;
 }
-
+.food-menu {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.food-menu a {
+  text-decoration: none;
+  padding: 20px;
+}
+.food-menu h2 {
+  margin: 20px;
+}
+.food-menu .items {
+  width: 600px;
+  height: 300px;
+  display: grid;
+  grid-template-columns: 400px 400px;
+  justify-items: center;
+}
+.items .item {
+  width: 400px;
+  display: flex;
+  flex-direction: row;
+  gap: 10px;
+}
+.item p {
+  font-size: 10px;
+}
+.item img {
+  width: 70px;
+  height: 70px;
+  border-radius: 8px;
+}
+.item button {
+  width: 70px;
+  height: 18px;
+  font-size: 10px;
+}
 @media (max-width: 500px) {
   .logo-container img {
     display: none;
