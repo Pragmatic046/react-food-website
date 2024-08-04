@@ -1,4 +1,4 @@
-import Logo from '../assets/hamburger.png'
+import Logo from '../assets/fast-food.png'
 export default function Navbar({title}) {
   return (
     <>

@@ -12,7 +12,7 @@ nav {
   display: flex;
   justify-content: space-around;
   align-items: center;
-  height: 20vh;
+  height: 15vh;
   background-color: white;
   width: 100%;
 }
@@ -21,7 +21,8 @@ nav {
   width: 3.5rem;
   height: 3.5rem;
   border: none;
-  border-radius: 50%;
+  border-radius: 10px;
+  /* border: 1px solid black; */
 }
 nav h1 {
   font-variant: small-caps;
@@ -84,6 +85,7 @@ nav h1 {
 }
 .food-items h2 {
   padding: 10px 0;
+  margin: 20px 0;
 }
 .food-items .img {
   display: flex;
@@ -103,8 +105,10 @@ nav h1 {
 .food-menu a {
   text-decoration: none;
   padding: 20px;
+  font-size: 12px;
 }
 .food-menu h2 {
+  padding: 10px 0;
   margin: 20px;
 }
 .food-menu .items {
@@ -132,6 +136,11 @@ nav h1 {
   width: 70px;
   height: 18px;
   font-size: 10px;
+  color: white;
+  background-color: rgba(255, 35, 35, 0.8);
+  border-radius: 5px;
+  border: none;
+  outline: none;
 }
 @media (max-width: 500px) {
   .logo-container img {
