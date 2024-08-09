@@ -1,67 +1,24 @@
-import Image from "../assets/burger.jpg";
-
-export default function FoodMenu() {
+export default function FoodMenu({ foodMenuItems }) {
   return (
     <>
       <div className="food-menu">
-        <h2>Food Menu</h2>
-        <div className="items">
-          <div className="item">
-            <img src={Image} alt="" />
-            <div>
-              <h5>Food Title</h5>
-              <h6>$2.3</h6>
-              <p>Made with Italian Sauce, Chicken and organic vegtables</p>
-              <button>Order Now</button>
-            </div>
-          </div>
-          <div className="item">
-            <img src={Image} alt="" />
-            <div>
-              <h5>Food Title</h5>
-              <h6>$2.3</h6>
-              <p>Made with Italian Sauce, Chicken and organic vegtables</p>
-              <button>Order Now</button>
-            </div>
-          </div>
-          <div className="item">
-            <img src={Image} alt="" />
-            <div>
-              <h5>Food Title</h5>
-              <h6>$2.3</h6>
-              <p>Made with Italian Sauce, Chicken and organic vegtables</p>
-              <button>Order Now</button>
-            </div>
-          </div>
-          <div className="item">
-            <img src={Image} alt="" />
-            <div>
-              <h5>Food Title</h5>
-              <h6>$2.3</h6>
-              <p>Made with Italian Sauce, Chicken and organic vegtables</p>
-              <button>Order Now</button>
-            </div>
-          </div>
-          <div className="item">
-            <img src={Image} alt="" />
-            <div>
-              <h5>Food Title</h5>
-              <h6>$2.3</h6>
-              <p>Made with Italian Sauce, Chicken and organic vegtables</p>
-              <button>Order Now</button>
-            </div>
-          </div>
-          <div className="item">
-            <img src={Image} alt="" />
-            <div>
-              <h5>Food Title</h5>
-              <h6>$2.3</h6>
-              <p>Made with Italian Sauce, Chicken and organic vegtables</p>
-              <button>Order Now</button>
-            </div>
-          </div>
+        <h1 className="food-menu-heading">Food Menu</h1>
+        <div className="food-menu-items">
+          {foodMenuItems.map((food, index) => (
+            <>
+              <div className="menu-card" key={index}>
+                  <img src={food.image} alt={food.name} />
+                <div className="food-item-details">
+                  <h1>{food.name}</h1>
+                  <h2>${food.price}</h2>
+                  <p>{food.servings}</p>
+                  <button>Order Now</button>
+                </div>
+              </div>
+            </>
+          ))}
         </div>
-        <a href="">See All Foods</a>
+        <p className="see-all-foods"> See All Foods</p>
       </div>
     </>
   );

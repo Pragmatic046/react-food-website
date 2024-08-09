@@ -1,19 +1,19 @@
-import React from "react";
-import Burger from "../assets/burger.jpg";
-import Pizza from "../assets/pizza.jpg";
-import FrenchFries from "../assets/frenchfries.jpg";
-
-export default function FoodItems() {
+function FoodItems({ previewItems }) {
   return (
-    <>
-      <div className="food-items">
-        <h2>Explore Foods</h2>
-        <div className="img">
-          <img src={Burger} alt="" />
-          <img src={Pizza} alt="" />
-          <img src={FrenchFries} alt="" />
-        </div>
+    <div className="preview-items">
+      <h1>Explore Foods</h1>
+      <div className="cards">
+        {previewItems.map((food, index) => (
+          <>
+            <div className="card" key={index}>
+              <img src={food.image} alt={food.name} />
+              <p>{food.name}</p>
+            </div>
+          </>
+        ))}
       </div>
-    </>
+    </div>
   );
 }
+
+export default FoodItems;
